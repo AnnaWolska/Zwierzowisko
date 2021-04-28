@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    {% if user.is_authenticated %}
+  <p style= "color: saddlebrown;" > Jesteś zalogowany/a na Zwierzowisku: {{ user.username }}</p>
+        {% endif %}
+
+
+        <div class="blogs">
+
+        <p>lista Twoich ulubionych blogów:</p>
+
+        <ul>
+
+                {% for favorite in favorites %}
+
+                <li>     <p><a href="/blog-details/{{favorite.blogs.id}}" >  {{favorite.blogs.id}}.
+
+                {{favorite.blogs.title}}   - {{favorite.blogs.animal}} </a> </p>   </li>
+                <p style="font-size: 15px;">   {{favorite.blogs.author}}, {{favorite.blogs.data}}  </p>
+
+                {% endfor %}
+
+
+
+         </ul>
+
+    </div>
+
+
+    <div class="buttons">
+        <ul>
+
+            <li> <a href="/blog-list/" class="btn">czytaj wszystkie blogi</a> </li>
+            <li> <a href="/user-blogs/" class="btn">Twoje blogi</a> </li>
+            <li> <a href="/add-blog/" class="btn">dodaj nowy blog</a> </li>
+             <li> <a href="/" class="btn">wróć do strony głównej</a> </li>
+
+
+         </ul>
+
+    </div>
+
+
+
+{% endblock %}
+
+

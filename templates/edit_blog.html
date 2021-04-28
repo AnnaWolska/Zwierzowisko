@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    {% if user.is_authenticated %}
+<p style= "color: saddlebrown;" > Jesteś zalogowany/a na Zwierzowisku: {{ user.username }}</p>
+
+    <br/>
+
+        <p>To jest blog pod tytułem:  "{{ blog.title }}"</p>
+
+    <p>dodawaj, edytuj lub usuwaj wpisy do swojego bloga:</p>
+
+
+        <h4><a href="/add-article/{{ blog.id }}" class="btn">dodaj wpis</a></h4>
+ {% endif %}
+        <ul>
+
+
+
+                {% for article in blog.article_set.all %}
+                <li> {{article.article_title}}
+                   <br>
+                 <p  style="font-size: 18px;" >   {{ article.one_article }} </p>
+                </li>
+                {% endfor %}
+
+
+
+         </ul>
+
+    </div>
+
+    <div class="buttons">
+        <ul>
+
+
+            <li> <a href="/blog-list/" class="btn"> wszystkie blogi </a> </li>
+            <li> <a href="/user-blogs/" class="btn">Twoje blogi</a> </li>
+            <li> <a href="/fav/" class="btn">czytaj ulubione blogi</a> </li>
+            <li> <a href="/" class="btn">wróć do strony głównej</a> </li>
+
+         </ul>
+
+    </div>
+        <div class="blogs">
+
+
+
+{% endblock %}

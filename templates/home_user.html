@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    {% if user.is_authenticated %}
+        <p> Witaj wśród nas {{ user.username }}! </p>
+
+         <p>jesteś zalogowany</p>
+
+
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+
+
+
+
+
+
+    <div class="buttons">
+        <ul>
+            <li> <a href="" class="btn">wyloguj</a> </li>
+            <li> <a href="/blog-list/" class="btn">czytaj blogi</a> </li>
+            <li> <a href="/edit-blog/" class="btn">edytuj swój blog</a> </li>
+            <li> <a href="/add-blog/" class="btn">dodaj nowy blog</a> </li>
+            <li> <a href="/fav/" class="btn">czytaj ulubione</a> </li>
+
+         </ul>
+
+    </div>
+    <div class="about">
+        <p>
+            ZWIERZOWISKO to nowa przyjazna przestrzń dla wszystkich miłośników zwierząt
+        </p>
+    <p>teraz z łatwością możesz tworzyć bloga o przygodach Twojego zwirzaka</p>
+    <p>Podziel się z innymi ciekawymi historiami, które zawsze opowiadasz, a których bohaterem jest Twój zwirzak</p>
+    <p>poznaj innych przyjaciół zwierząt, śledź najciekawsze blogi</p>
+
+    </div>
+
+    {% endblock %}
+

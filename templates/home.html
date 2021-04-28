@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{#    <p>{{ message }}</p>#}
+
+    {% if user.is_authenticated %}
+  <p style= "color: saddlebrown;"   >  Witaj na Zwierzowisku {{ user.username }}!   {{ message }}       </p>
+            <p><a href="{% url 'logout' %}">wyloguj</a></p>
+  <p>   </p>
+{% else %}
+  <p style= "color: saddlebrown;"  >Nie jesteś zalogowany</p>
+  <a href="{% url 'login' %}">zaloguj</a>
+{% endif %}
+
+
+
+
+    <div class="buttons">
+        <ul>
+{#            <li> <a href="/accounts/login/" class="btn">zaloguj</a> </li>#}
+
+            <li> <a href="/blog-list/" class="btn">czytaj blogi </a> </li>
+            <li> <a href="/user-blogs/" class="btn">Twoje blogi (wymagane logowanie)</a> </li>
+            <li> <a href="/add-blog/" class="btn">dodaj nowy blog (wymagane logowanie)</a> </li>
+            <li> <a href="/fav/" class="btn">czytaj ulubione blogi (wymagane logowanie) </a> </li>
+         </ul>
+
+    </div>
+    <div class="about">
+        <p>
+            ZWIERZOWISKO to nowa przyjazna przestrzń dla wszystkich miłośników zwierząt
+        </p>
+    <p>teraz z łatwością możesz tworzyć bloga o przygodach Twojego zwirzaka</p>
+    <p>Podziel się z innymi ciekawymi historiami, które zawsze opowiadasz, a których bohaterem jest Twój zwirzak</p>
+    <p>poznaj innych przyjaciół zwierząt, śledź najciekawsze blogi</p>
+
+    </div>
+
+    {% endblock %}
+
+
+
+
+
+{#{% extends 'base.html' %}#}
+{##}
+{#{% block title %}Home{% endblock %}#}
+{##}
+{#{% block content %}#}
+{#{% if user.is_authenticated %}#}
+{#  Hi {{ user.username }}!#}
+{#{% else %}#}
+{#  <p>You are not logged in</p>#}
+{#  <a href="{% url 'login' %}">login</a>#}
+{#{% endif %}#}
+{#{% endblock %}#}
