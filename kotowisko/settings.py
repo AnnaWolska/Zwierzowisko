@@ -129,3 +129,6 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'
 
+# set DJANGO_SETTINGS_MODULE=kotowisko.settings
+# export DJANGO_SETTINGS_MODULE=kotowisko.settings
+

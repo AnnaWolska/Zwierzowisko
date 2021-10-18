@@ -68,6 +68,8 @@ if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     export PS1
 fi
 
+set DJANGO_SETTINGS_MODULE=kotowisko.settings
+
 # This should detect bash and zsh, which have a hash command that must
 # be called to get it to forget past commands.  Without forgetting
 # past commands the $PATH changes we made may not be respected

@@ -2,12 +2,12 @@
 
 {% block content %}
     {% if user.is_authenticated %}
-        <p style="color: saddlebrown;"> Jesteś zalogowany/a na Zwierzowisku: {{ user.username }}</p>
+        <p style="color: darkblue;"> Jesteś zalogowany/a na Zwierzowisku: {{ user.username }}</p>
     {% endif %}
 
-    <p>{{ message }}</p>
-     <p>{{ message3 }}</p>
-    <p>{{ message4 }}</p>
+    <p style="color: darkblue;">{{ message }}</p>
+     <p style="color: darkblue;">{{ message3 }}</p>
+    <p style="color: darkblue;">{{ message4 }}</p>
 
     <h2><p>wpisy w blogu pod tytułem "{{ blog.title }}":</p></h2>
 
@@ -20,8 +20,8 @@
                 <p> {{ article.one_article }}
 
                     {% if user.is_authenticated %}
-                        <a class="del_art" name="delate_art" style="color: firebrick;"
-                           href="/article-delate/{{ article.id }}">usuń artykuł</a>
+                        <a class="buttons" class="del_art" name="delate_art" style="color: firebrick;"
+                           href="/article-delate/{{ article.id }}">usuń wpis</a>
                     {% endif %}
                 </p>
 
@@ -35,7 +35,7 @@
     </ul>
 
 
-    <h2><p>komentarze do tego bloga:</p></h2>
+    <h3><p>komentarze do tego bloga:</p></h3>
 
     <ul>
 
@@ -59,27 +59,27 @@
     </div>
 
     <form method="post">
-        <input type="submit" value="Polub">
+        <input class="buttons" type="submit" value="Polub">
         {% csrf_token %}
     </form>
 
-    <div class="buttons">
+    <div>
     <ul>
-        <li><a href="/edit-comment/{{ blog.id }}"> dodaj komentarz </a></li>
-        <li><a href="/blog-list/" class="btn"> wszystkie blogi </a></li>
+        <li class="buttons"><a href="/edit-comment/{{ blog.id }}"> dodaj komentarz </a></li>
+        <li class="buttons"><a href="/blog-list/" class="btn"> wszystkie blogi </a></li>
 
         {% if user.is_authenticated %}
-            <li><a href="/fav/" class="btn"> dodaj ten blog do ulubionych </a></li>
-            <li><a href="/add-article/{{ blog.id }}"> dodaj wpis do bloga </a></li>
+            <li class="buttons"><a href="/fav/" class="btn"> dodaj ten blog do ulubionych </a></li>
+            <li class="buttons"><a href="/add-article/{{ blog.id }}"> dodaj wpis do bloga </a></li>
         {% endif %}
-        <li><a href="/fav/" class="btn"> ulubione blogi </a></li>
-        <li><a href="/" class="btn">wróć do strony głównej</a></li>
+        <li class="buttons"><a href="/fav/" class="btn"> ulubione blogi </a></li>
+        <li class="buttons"><a href="/" class="btn">wróć do strony głównej</a></li>
 
         {% if user.is_authenticated %}
 
             {#      {% for b in blog %}#}
 
-            <li><a class="del_blog" name="delate_blog" style="color: firebrick;" href="/blog-delate/{{ blog.id }}">usuń
+            <li class="buttons"><a class="del_blog" name="delate_blog" style="color: firebrick;" href="/blog-delate/{{ blog.id }}">usuń
                 bloga</a></li>
             {#            {% endfor %}#}
 

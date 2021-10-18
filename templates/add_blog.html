@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
     {% if user.is_authenticated %}
-<p style= "color: saddlebrown;" > Jesteś zalogowany/a na Zwierzowisku: {{ user.username }}</p>
+<p style= "color: darkblue;" > Jesteś zalogowany/a na Zwierzowisku: {{ user.username }}</p>
         {% endif %}
             <br/>
     <br/>
@@ -15,7 +14,7 @@
      <p><input type="submit" value="klikam"></p>
     </form>
 
- <li> <a href="/" class="btn">wróć do strony głównej</a> </li>
+ <li class="buttons"> <a href="/" class="btn">wróć do strony głównej</a> </li>
 
 
 {% endblock %}

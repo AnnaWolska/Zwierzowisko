@@ -32,7 +32,8 @@ urlpatterns = [
     path('edit-comment/<int:id_blog>',views.AddComment.as_view()),
     path('user-blogs/', views.UserBlogs.as_view()),
     path('blog-delate/<int:id>/',views.DelateBlog.as_view()),
-    path('article-delate/<int:id>/',views.DelateArticle.as_view())
+    path('article-delate/<int:id>/',views.DelateArticle.as_view()),
+    # path('add-photo/<int:id_blog>', views.AddPhoto.as_view()),
     # path('accounts/logout/', views.Home.as_view())
 
 ]

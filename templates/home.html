@@ -5,7 +5,7 @@
 {#    <p>{{ message }}</p>#}
 
     {% if user.is_authenticated %}
-  <p style= "color: saddlebrown;"   >  Witaj na Zwierzowisku {{ user.username }}!   {{ message }}       </p>
+  <p style= "color: black;"   >  Witaj na Zwierzowisku, jesteś zalogowany/a jako: {{ user.username }}!   {{ message }}       </p>
             <p><a href="{% url 'logout' %}">wyloguj</a></p>
   <p>   </p>
 {% else %}
@@ -16,27 +16,27 @@
 
 
 
-    <div class="buttons">
+    <div >
         <ul>
 {#            <li> <a href="/accounts/login/" class="btn">zaloguj</a> </li>#}
 
-            <li> <a href="/blog-list/" class="btn">czytaj blogi </a> </li>
-            <li> <a href="/user-blogs/" class="btn">Twoje blogi (wymagane logowanie)</a> </li>
-            <li> <a href="/add-blog/" class="btn">dodaj nowy blog (wymagane logowanie)</a> </li>
-            <li> <a href="/fav/" class="btn">czytaj ulubione blogi (wymagane logowanie) </a> </li>
+            <li class="buttons"> <a href="/blog-list/" class="btn">czytaj blogi </a> </li>
+            <li class="buttons"> <a href="/user-blogs/" class="btn">Twoje blogi (wymagane logowanie)</a> </li>
+            <li class="buttons"> <a href="/add-blog/" class="btn">dodaj nowy blog (wymagane logowanie)</a> </li>
+            <li class="buttons"> <a href="/fav/" class="btn">czytaj ulubione blogi (wymagane logowanie) </a> </li>
          </ul>
 
     </div>
     <div class="about">
         <p>
-            ZWIERZOWISKO to nowa przyjazna przestrzń dla wszystkich miłośników zwierząt
+            ZWIERZOWISKO to nowa przyjazna przestrzeń dla wszystkich miłośników zwierząt
         </p>
-    <p>teraz z łatwością możesz tworzyć bloga o przygodach Twojego zwirzaka</p>
-    <p>Podziel się z innymi ciekawymi historiami, które zawsze opowiadasz, a których bohaterem jest Twój zwirzak</p>
+    <p>teraz z łatwością możesz tworzyć bloga o przygodach Twojego zwierzaka</p>
+    <p>Podziel się z innymi ciekawymi historiami, które zawsze opowiadasz, a których bohaterem jest Twój zwierzak</p>
     <p>poznaj innych przyjaciół zwierząt, śledź najciekawsze blogi</p>
 
     </div>
-
+{#     <img src="../static/zwirza.jpg" width="350" height="351">#}
     {% endblock %}
 
 

@@ -5,7 +5,7 @@
 
 
     {% if user.is_authenticated %}
-<p style= "color: saddlebrown;" > Jesteś zalogowany/a na Zwierzowisku: {{ user.username }}</p>
+<p style= "color: darkblue;" > Jesteś zalogowany/a na Zwierzowisku: {{ user.username }}</p>
 
     <br/>
 
@@ -33,14 +33,14 @@
 
     </div>
 
-    <div class="buttons">
+    <div>
         <ul>
 
 
-            <li> <a href="/blog-list/" class="btn"> wszystkie blogi </a> </li>
-            <li> <a href="/user-blogs/" class="btn">Twoje blogi</a> </li>
-            <li> <a href="/fav/" class="btn">czytaj ulubione blogi</a> </li>
-            <li> <a href="/" class="btn">wróć do strony głównej</a> </li>
+            <li class="buttons"> <a href="/blog-list/" class="btn"> wszystkie blogi </a> </li>
+            <li class="buttons"> <a href="/user-blogs/" class="btn">Twoje blogi</a> </li>
+            <li class="buttons"> <a href="/fav/" class="btn">czytaj ulubione blogi</a> </li>
+            <li class="buttons"> <a href="/" class="btn">wróć do strony głównej</a> </li>
 
          </ul>
 

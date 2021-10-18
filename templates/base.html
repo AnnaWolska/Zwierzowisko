@@ -6,26 +6,26 @@
     <link rel="stylesheet" href={% static "style.css" %}>
     <title>Title</title>
 </head>
-<body>
-
+<body class="bodyclass">
+ <div class="wrapper">
   <div class="title">
-
-
-        <h1><br/>
-
-            ZWIERZOWISKO</h1>
-        <h2>
-
-           o naszych zwierzakch wszystko
-         <br/>
-            <br/>
-        </h2>
+     <img src="../static/new.png"width="300" height="150" >
+    <img src="../static/zwirza.jpg" width="150" height="150">
+{#        <h1><br/>#}
+{##}
+{#            ZWIERZOWISKO</h1>#}
+{#        <h2>#}
+{##}
+{#           o zwierzakch wszystko#}
+{#         <br/>#}
+{#            <br/>#}
+{#        </h2>#}
     </div>
 
 
      {% block content %}
      {% endblock %}
-
+  </div>
 
     <footer class="bottom">
         <p> Kontakt:</p>
