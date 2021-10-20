@@ -10,7 +10,9 @@
   <p>   </p>
 {% else %}
   <p style= "color: saddlebrown;"  >Nie jesteś zalogowany</p>
-  <a href="{% url 'login' %}">zaloguj</a>
+  <a class="buttons" href="{% url 'login' %}">zaloguj</a>
+   <a class="buttons" href="/registration/">zarejestruj</a>
+
 {% endif %}
 
 

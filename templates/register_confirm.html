@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{#   {% if user.is_authenticated %}#}
+{#<p style= "color: darkblue;" > Jesteś zalogowany/a na Zwierzowisku: {{ user.username }}</p>#}
+{#        {% endif %}#}
+{#            <br/>#}
+{#    <br/>#}
+{#    Zacznij nowy wpis do swojego bloga:#}
+
+
+{#    <form method="POST">#}
+{#     {% csrf_token %}#}
+{#        {{ form.as_p }}#}
+{#     <p><input type="submit" value="klikam"></p>#}
+{#    </form>#}
+
+     <p style="color: darkblue;">{{ message }}</p>
+
+
+ <li class="buttons"> <a href="/" class="btn">wróć do strony głównej</a> </li>
+
+
+{% endblock %}
