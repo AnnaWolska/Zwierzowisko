@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{#   {% if user.is_authenticated %}#}
-{#<p style= "color: darkblue;" > Jesteś zalogowany/a na Zwierzowisku: {{ user.username }}</p>#}
-{#        {% endif %}#}
+   {% if user.is_authenticated %}
+<p style= "color: darkblue;" > Jesteś zarejestrowany/a na Zwierzowisku: {{ user.username }}</p>
+        {% endif %}
 {#            <br/>#}
 {#    <br/>#}
 {#    Zacznij nowy wpis do swojego bloga:#}

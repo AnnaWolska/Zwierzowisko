@@ -35,7 +35,7 @@ urlpatterns = [
     path('article-delate/<int:id>/',views.DelateArticle.as_view()),
     path('add-photo/<int:id>/', views.AddPhoto.as_view()),
     path('registration/', views.Register.as_view()),
-    path('accounts/logout/',views.Logout.as_view()),
-    path('register-confirm/', views.RegisterConfirm.as_view())
+    path('accounts/logout/',views.logout_page),
+    path('registration/register-confirm/', views.RegisterConfirm.as_view())
 
 ]
